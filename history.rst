@@ -260,3 +260,22 @@ package should be installed::
     espmake flash
 
 And it blinks!
+
+
+2018-07-27 Backwards: Arduino as esp-idf component
+--------------------------------------------------
+
+.. __: https://github.com/espressif/arduino-esp32/blob/master/docs/esp-idf_component.md
+
+Missed `this bit`__, but that's way more sensible, so let's rework the blink:
+
+    cp -r esp-idf/examples/get-started/blink/ blink-arduino-esp
+    cd blink-arduino-esp/
+    mkdir components
+    cd components
+    ln -s ../../arduino-esp32/ arduino
+    make menuconfig
+    # 4 MB flash, disable several Arduino component don't care, led 2
+    make flash
+
+Good, so now I can use arduino components within the esp-idf framework.
