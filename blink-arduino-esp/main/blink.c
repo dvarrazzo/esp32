@@ -2,7 +2,7 @@
 
 void app_main()
 {
-    const int led = 2;
+    const int led = CONFIG_BLINK_GPIO;
 
     initArduino();
     pinMode(led, OUTPUT);
