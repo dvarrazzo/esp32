@@ -267,7 +267,9 @@ And it blinks!
 
 .. __: https://github.com/espressif/arduino-esp32/blob/master/docs/esp-idf_component.md
 
-Missed `this bit`__, but that's way more sensible, so let's rework the blink:
+.. _blink-arduino-esp:
+
+Missed `this bit`__, but that's way more sensible, so let's rework the blink::
 
     cp -r esp-idf/examples/get-started/blink/ blink-arduino-esp
     cd blink-arduino-esp/
@@ -279,3 +281,17 @@ Missed `this bit`__, but that's way more sensible, so let's rework the blink:
     make flash
 
 Good, so now I can use arduino components within the esp-idf framework.
+
+
+Reading an analogue value
+-------------------------
+
+Reading analog value from a potentiometer, using Arduino into the esp-idf
+framework. See the ``pot`` directory.
+
+Project initialized like in `blink-arduino-esp`_, with some further
+customizaton: setting up a C++ source file (or it's impossible to use the
+serial), customising the config menu.
+
+Analog value read from pin ``GPIO36`` (selectable from menu). The value print
+on serial ranges from 0 to 4095.

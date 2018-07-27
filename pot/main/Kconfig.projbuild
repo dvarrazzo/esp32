@@ -1,0 +1,10 @@
+menu "Project specific configuration"
+
+config POT_IN_GPIO
+    int "Potentiometer GPIO number"
+	range 0 36
+	default 36
+	help
+		GPIO number to read the analog value.
+
+endmenu
