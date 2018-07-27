@@ -1,5 +1,5 @@
 # Blink Example
 
-Starts a FreeRTOS task to blink an LED
+Blink a led using the Arduino component in the esp-idf framework.
 
-See the README.md file in the upper level 'examples' directory for more information about examples.
+This is pretty much how I would like to work.
