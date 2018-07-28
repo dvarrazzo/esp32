@@ -295,3 +295,28 @@ serial), customising the config menu.
 
 Analog value read from pin ``GPIO36`` (selectable from menu). The value print
 on serial ranges from 0 to 4095.
+
+
+Galvanic Stress Response
+------------------------
+
+Copying the ``pot`` directory into ``gsr``. Custom variable renamed. See
+``diff -u {pot,gsr}/sdkconfig`` if there's any meaningful difference.
+
+The `Grove GSR Sensor`__ can be attached like a potentiometer:
+
+.. __: http://wiki.seeedstudio.com/Grove-GSR_Sensor/
+
+- Black: to GND
+- Red: to VDD
+- Yellow: to GPIO36
+- White: not connected
+
+The Grove sensor has a 4 pins connector with a step that it's not compatible
+with the breadboard, so I've cut off the connector from one side and made the
+wires somewhat more rigid with some solderer.
+
+Not wearing the sensor, plugging in the monitor. Got tripped by the analog
+range of the esp32 being 4x Arduino's one. After the adjustment I got some
+form of read, where I could relax up to 360-400, and could "stress" down below
+300.
