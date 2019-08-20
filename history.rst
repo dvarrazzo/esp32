@@ -320,3 +320,20 @@ Not wearing the sensor, plugging in the monitor. Got tripped by the analog
 range of the esp32 being 4x Arduino's one. After the adjustment I got some
 form of read, where I could relax up to 360-400, and could "stress" down below
 300.
+
+
+Plotting data
+-------------
+
+I've only been dumping number. Displaying them?
+
+Starting from `this example`__, into the ``plot`` dir. Had to ``apt install
+python-tk``.
+
+.. __: http://www.toptechboy.com/tutorial/python-with-arduino-lesson-11-plotting-and-graphing-live-data-from-arduino-with-matplotlib/
+
+Wait, first check this__
+
+.. __: https://www.thepoorengineer.com/en/arduino-python-plot/
+
+...or in general google "arduino python plot"...
